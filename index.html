@@ -46,12 +46,12 @@
 
   .load {
     background-image: url('/img/loading.gif');
-    min-height: 100%;
+    /* min-height: 100%; */
     background-position: center;
-    background-size: cover;
-    animation-name: example;
-    animation-duration: 4s;
-    animation-delay: 2s;
+    /* background-size: cover; */
+    /* animation-name: example; */
+    /* animation-duration: 4s; */
+    /* animation-delay: 2s; */
   }
 
   .load:hover {
@@ -60,20 +60,19 @@
     transform: scale(0.8);
   }
 
-  @keyframes example {
-    0%   {background-color:red; left:0px; top:0px;}
-    25%  {background-color:yellow; left:200px; top:0px;}
-    50%  {background-color:blue; left:200px; top:200px;}
-    75%  {background-color:green; left:0px; top:200px;}
-    100% {background-color:red; left:0px; top:0px;}
-  }
+  /* @keyframes example {
+    0%   {left:0px; top:0px;}
+    25%  {left:200px; top:0px;}
+    50%  {left:200px; top:200px;}
+    75%  {left:0px; top:200px;}
+    100% {left:0px; top:0px;}
+  } */
 </style>
 
-<body class="load">
+<body>
 
-<div class="load" id="loader" onclick="document.getElementById('contact').style.display = 'none';">
-
-</div>
+<!-- <div class="load" id="loader" onclick="document.getElementById('contact').style.display = 'none';">
+</div> -->
 
   <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
     <div class="w3-display-topleft w3-padding-large w3-xlarge">
