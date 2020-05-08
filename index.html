@@ -16,10 +16,6 @@
   <title>Con-Struct.Solutions</title>
 
   <style>
-    /* body > div
-    {
-    transition:all 1s ease;
-    } */
 
     .bgimg {
       background-image: url('./img/bg.gif');
@@ -29,16 +25,16 @@
       background-attachment: fixed;
       background-repeat: no-repeat;
     }
+
   </style>
 
 <body>
 
   <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
     <div class="w3-display-topleft w3-padding-large w3-xlarge">
-      Con-Struct.Solutions
+      <a href="#">Con-Struct.Solutions</a>
     </div>
     <div class="w3-display-middle">
-      <!-- <h1 class="w3-jumbo w3-animate-top">COMING SOON</h1> -->
       <h1 class="display-4 w3-animate-top">COMING SOON</h1>
       <hr class="w3-border-grey" style="margin:auto;width:40%">
       <p class="w3-large w3-center" id="demo"></p>
@@ -50,7 +46,7 @@
 
 
   <!-- Contact Section -->
-  <div class="w3-padding-32 w3-content w3-text-grey" id="contact" style="margin-bottom:64px">
+  <div class="w3-padding-32 w3-content w3-text-grey container" id="contact" style="margin-bottom:64px">
 
     <hr class="w3-opacity">
     <!-- Image of location/map -->
@@ -63,17 +59,21 @@
     </div>
     <hr class="w3-opacity">
     <p id="contact_me" style="display:none"></p>
-    <form action="" method="get" target="_blank">
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+    <form action="" method="get" target="_blank" style="display:none">
+      <p><input id="Name" class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
       <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="Email"></p>
       <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Subject" required name="Subject"></p>
       <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required name="Message"></p>
       <p>
-        <button class="w3-button w3-light-grey w3-padding-large" type="submit" onclick="typeWriter()">
+        <button class="w3-button w3-light-grey w3-padding-large" type="submit">
           <i class="fa fa-paper-plane"></i> SEND MESSAGE
         </button>
       </p>
+      <!-- <p id="tests"></p> -->
     </form>
+    <button class="w3-button w3-light-grey w3-padding-large" onclick="typeWriter()">
+      <i class="fa fa-paper-plane"></i> SEND MESSAGE
+    </button>
   </div>
 
   <div class="text-center" id="overlay">

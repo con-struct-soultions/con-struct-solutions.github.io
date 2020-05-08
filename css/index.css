@@ -55,8 +55,8 @@ a:link {
 }
 
 a:hover {
-  text-decoration: underline;
-  color: grey;
+  /* text-decoration: underline; */
+  color: white;
 }
 
 @include media-breakpoint-up(sm) {

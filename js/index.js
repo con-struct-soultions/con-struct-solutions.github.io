@@ -27,7 +27,7 @@ d3.select(".chart")
       var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
       // Output the result in an element with id="demo"
-      document.getElementById("demo").innerHTML = days + " Days - " + hours + "h "
+      document.getElementById("demo").innerHTML = days + " Days " + hours + "h "
       + minutes + "m " + seconds + "s ";
 
       // If the count down is over, write some text
@@ -52,19 +52,21 @@ d3.select(".chart")
         setTimeout(typeWriter, speed);
       }
       document.getElementById("contact_me").style.display = "block";
+      document.getElementsByTagName("FORM")[0].style.display = "block";
+      document.getElementsByTagName("BUTTON")[1].style.display = "none";
     };
 
-    // setTimeout(jQuery(window).load(function(){ $('#overlay').fadeOut(); }, 3000);
-    document.getElementById("loading").style.scale = "5";
-
     setTimeout(function(){
-      // document.getElementById("overlay").style.display = "none";
       document.getElementById("overlay").style.opacity = "0";
       document.getElementById("overlay").style.zIndex = "-1";
     }, 1000);
-    // function doneLoading(){
-    //   // ovrl.style.opacity = 0;
-    //   setTimeout(function(){
-    //     document.getElementById("overlay").style.display = "none";
-    //   }, 1200);
-    // };
+
+    // function email_me() {
+    //   var name = document.getElementsByName("Name").value
+    //   var email = document.getElementsByName("Email").value
+    //   var sub = document.getElementsByName("Subject").value
+    //   var mes = document.getElementsByName("Message").value
+    //   document.getElementById("tests").innerHTML = '<a href="mailto:support@con-struct.solutions?subject=' + name +
+    //   ' - ' + email + ' - ' + sub + '&body=' + mes + 'test"class="w3-button w3-light-grey w3-padding-large">Test</a>';
+    //   // document.getElementsByTagName("BUTTON").;
+    // }
