@@ -7,3 +7,64 @@ d3.select(".chart")
     .append("div")
     .style("width", function(d) { return d + "px"; })
     .text(function(d) { return d; });
+
+    // Set the date we're counting down to
+    var countDownDate = new Date("May 15, 2020 06:00:00").getTime();
+
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+
+      // Get today's date and time
+      var now = new Date().getTime();
+
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Output the result in an element with id="demo"
+      document.getElementById("demo").innerHTML = days + " Days - " + hours + "h "
+      + minutes + "m " + seconds + "s ";
+
+      // If the count down is over, write some text
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+
+    function myFunction() {
+      document.getElementById("contact").style.display = "block";
+    }
+
+    var i = 0;
+    var txt = 'Lets get in touch. Send me a message:';
+    var speed = 50;
+
+    function typeWriter() {
+      if (i < txt.length) {
+        document.getElementById("contact_me").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+      document.getElementById("contact_me").style.display = "block";
+    };
+
+    // setTimeout(jQuery(window).load(function(){ $('#overlay').fadeOut(); }, 3000);
+    document.getElementById("loading").style.scale = "5";
+
+    setTimeout(function(){
+      // document.getElementById("overlay").style.display = "none";
+      document.getElementById("overlay").style.opacity = "0";
+      document.getElementById("overlay").style.zIndex = "-1";
+    }, 1000);
+    // function doneLoading(){
+    //   // ovrl.style.opacity = 0;
+    //   setTimeout(function(){
+    //     document.getElementById("overlay").style.display = "none";
+    //   }, 1200);
+    // };

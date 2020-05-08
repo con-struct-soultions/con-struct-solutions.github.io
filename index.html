@@ -1,135 +1,97 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 
-<title>Con-Struct.Solutions</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<script src="https://d3js.org/d3.v3.min.js"></script>
-<script src="https://kit.fontawesome.com/179b805219.js" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="/css/index.css">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <script src="https://d3js.org/d3.v3.min.js"></script>
+  <script src="https://kit.fontawesome.com/179b805219.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./css/index.css">
 
-<style>
-  body,
-  h1 {
-    font-family: "Raleway", sans-serif
-  }
+  <title>Con-Struct.Solutions</title>
 
-  body,
-  html {
-    height: 100%
-    /* scroll-behavior: smooth; */
-  }
+  <style>
+    /* body > div
+    {
+    transition:all 1s ease;
+    } */
 
-  /* body > div
-  {
-  transition:all 3s ease;
-  } */
-
-  a:link {
-  /* transition: width 2s, height 2s; */
-  text-decoration: none;
-  }
-
-  a:hover {
-  text-decoration: underline;
-  }
-
-  .bgimg {
-    background-image: url('/img/bg.gif');
-    min-height: 100%;
-    background-position: center;
-    background-size: cover;
-  }
-
-
-  /* .load {
-    background-image: url('/img/loading.gif');
-    min-height: 100%;
-    background-position: center;
-    background-size: cover;
-    animation-name: example;
-    animation-duration: 4s;
-    animation-delay: 2s;
-  } */
-
-  /* .load:hover {
-    -webkit-transform: scale(0.8);
-    -ms-transform: scale(0.8);
-    transform: scale(0.8);
-  } */
-
-  /* @keyframes example {
-    0%   {left:0px; top:0px;}
-    25%  {left:200px; top:0px;}
-    50%  {left:200px; top:200px;}
-    75%  {left:0px; top:200px;}
-    100% {left:0px; top:0px;}
-  } */
-</style>
+    .bgimg {
+      background-image: url('./img/bg.gif');
+      min-height: 100%;
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+    }
+  </style>
 
 <body>
 
   <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
-    <div class="w3-display-topleft w3-padding-large w3-xxlarge">
+    <div class="w3-display-topleft w3-padding-large w3-xlarge">
       Con-Struct.Solutions
     </div>
-    <!-- <div class="w3-display-topright w3-padding-large w3-xlarge">
-
-    </div> -->
     <div class="w3-display-middle">
-      <h1 class="w3-jumbo w3-animate-top">COMING SOON</h1>
+      <!-- <h1 class="w3-jumbo w3-animate-top">COMING SOON</h1> -->
+      <h1 class="display-4 w3-animate-top">COMING SOON</h1>
       <hr class="w3-border-grey" style="margin:auto;width:40%">
-      <p class="w3-large w3-center">35 days left</p>
+      <p class="w3-large w3-center" id="demo"></p>
     </div>
-    <div class="w3-display-bottomleft w3-padding-large w3-xlarge">
-      <a href="#contact" onclick="myFunction()">Contact Me</a>
-      <!-- Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a> -->
+    <div class="w3-display-bottomleft w3-padding-large w3-large">
+      <a href="#contact">Contact Me</a>
     </div>
   </div>
+
 
   <!-- Contact Section -->
-<div class="w3-padding-32 w3-content w3-text-grey" id="contact" style="margin-bottom:64px; display:none">
-  <!-- <a href="#contact" onclick="myFunction()"><h2>Contact Me</h2></a> -->
+  <div class="w3-padding-32 w3-content w3-text-grey" id="contact" style="margin-bottom:64px">
 
+    <hr class="w3-opacity">
+    <!-- Image of location/map -->
+    <!-- <img src="https://i.gifer.com/OC7R.gif" class="w3-image w3-greyscale" style="width:100%;margin:32px 0"> -->
 
-  <hr class="w3-opacity">
-  <!-- Image of location/map -->
-  <img src="https://i.gifer.com/OC7R.gif" class="w3-image w3-greyscale" style="width:100%;margin:32px 0">
-
-  <div class="w3-section">
-    <p><i class="fa fa-map-marker fa-fw w3-xlarge w3-margin-right"></i> Houston, TX</p>
-    <p><i class="fa fa-phone fa-fw w3-xlarge w3-margin-right"></i> Phone: <a href="tel:2813447041">(281) 344-7041</a></p>
-    <p><i class="fa fa-envelope fa-fw w3-xlarge w3-margin-right"></i> Email: <a href="mailto:connor@con-struct.solutions">Connor@Con-Struct.Solutions</a></p>
+    <div class="w3-section">
+      <!-- <p><i class="fa fa-map-marker fa-fw w3-xlarge w3-margin-right"></i> Houston, TX</p> -->
+      <p><i class="fa fa-phone fa-fw w3-xlarge w3-margin-right"></i> Phone: <a href="tel:2813447041">(281) 344-7041</a></p>
+      <p><i class="fa fa-envelope fa-fw w3-xlarge w3-margin-right"></i> Email: <a href="mailto:connor@con-struct.solutions">Connor@Con-Struct.Solutions</a></p>
+    </div>
+    <hr class="w3-opacity">
+    <p id="contact_me" style="display:none"></p>
+    <form action="" method="get" target="_blank">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Subject" required name="Subject"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required name="Message"></p>
+      <p>
+        <button class="w3-button w3-light-grey w3-padding-large" type="submit" onclick="typeWriter()">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </p>
+    </form>
   </div>
-  <hr class="w3-opacity">
-  <p>Lets get in touch. Send me a message:</p>
-  <form action="/action_page.php" method="get" target="_blank">
-    <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
-    <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="Email"></p>
-    <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Subject" required name="Subject"></p>
-    <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required name="Message"></p>
-    <p>
-      <button class="w3-button w3-light-grey w3-padding-large" type="submit">
-        <i class="fa fa-paper-plane"></i> SEND MESSAGE
-      </button>
-    </p>
-  </form>
-</div>
-<!-- End Contact Section -->
 
-<!-- Footer -->
+  <div class="text-center" id="overlay">
+    <img id="loading" class"img-fluid align-middle" src="./img/loading.gif">
+  </div>
+  <!-- End Contact Section -->
+
+  <!-- Footer -->
   <footer>
-    <script src="/js/index.js"></script>
-    <script>
-      function myFunction() {
-        document.getElementById("contact").style.display = "block";
-      }
-    </script>
-  <!-- End footer -->
+    <script src="./js/index.js"></script>
   </footer>
-<!-- END PAGE CONTENT -->
+  <!-- END PAGE CONTENT -->
 
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
+
 </html>
