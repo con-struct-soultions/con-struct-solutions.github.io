@@ -59,7 +59,7 @@ d3.select(".chart")
     setTimeout(function(){
       document.getElementById("overlay").style.opacity = "0";
       document.getElementById("overlay").style.zIndex = "-1";
-    }, 1000);
+    }, 2000);
 
     // function email_me() {
     //   var name = document.getElementsByName("Name").value
