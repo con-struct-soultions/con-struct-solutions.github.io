@@ -16,7 +16,6 @@
   <title>Con-Struct.Solutions</title>
 
   <style>
-
     .bgimg {
       background-image: url('./img/bg.gif');
       min-height: 100%;
@@ -25,7 +24,6 @@
       background-attachment: fixed;
       background-repeat: no-repeat;
     }
-
   </style>
 
 <body>
@@ -74,6 +72,16 @@
     <button class="w3-button w3-light-grey w3-padding-large" onclick="typeWriter()">
       <i class="fa fa-paper-plane"></i> SEND MESSAGE
     </button>
+
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+      <input type="hidden" name="cmd" value="_donations" />
+      <input type="hidden" name="business" value="conman6989@gmail.com" />
+      <input type="hidden" name="item_name" value="For contributions to Con-Struct Solutions(Community Applications, Fix Common Problems, Forum Help, etc)" />
+      <input type="hidden" name="currency_code" value="USD" />
+      <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+      <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+    </form>
+
   </div>
 
   <div class="text-center justify-content-center d-flex" id="overlay">
